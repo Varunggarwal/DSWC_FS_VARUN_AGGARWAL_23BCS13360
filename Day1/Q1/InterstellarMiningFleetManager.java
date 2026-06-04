@@ -2,7 +2,7 @@ package Day1.Q1;
 
 abstract class SpaceVessel {
 
-    protected short shipId;           // max 30,000
+    protected short shipId;
     protected boolean operationalStatus;
     protected char fleetClassification;
 
@@ -30,7 +30,6 @@ abstract class SpaceVessel {
 
 class MiningShip extends SpaceVessel {
 
-    // 2D array representing bays and containers
     private float[][] cargoHold;
 
     public MiningShip(short shipId,
@@ -42,7 +41,6 @@ class MiningShip extends SpaceVessel {
         this.cargoHold = cargoHold;
     }
 
-    // Calculate total ore weight
     public float calculateTotalOreWeight() {
 
         float totalWeight = 0.0f;
@@ -56,7 +54,7 @@ class MiningShip extends SpaceVessel {
         return totalWeight;
     }
 
-    // Find heaviest container
+
     public float findHeaviestContainer() {
 
         float heaviest = Float.MIN_VALUE;
@@ -78,7 +76,6 @@ public class InterstellarMiningFleetManager {
 
     public static void main(String[] args) {
 
-        // Cargo hold: Rows = Bays, Columns = Containers
         float[][] cargo1 = {
                 {1200.5f, 3400.8f, 2200.2f},
                 {4500.0f, 3800.6f},
@@ -90,7 +87,6 @@ public class InterstellarMiningFleetManager {
                 {3100.5f, 2100.8f, 7000.4f}
         };
 
-        // Create mining ships
         MiningShip ship1 = new MiningShip(
                 (short) 1001,
                 true,
@@ -105,12 +101,10 @@ public class InterstellarMiningFleetManager {
                 cargo2
         );
 
-        // Fleet maintained using 1D array of objects
         SpaceVessel[] fleet = new SpaceVessel[2];
         fleet[0] = ship1;
         fleet[1] = ship2;
 
-        // Display details
         for (SpaceVessel vessel : fleet) {
 
             if (vessel instanceof MiningShip) {
@@ -133,7 +127,6 @@ public class InterstellarMiningFleetManager {
                                 + " kg"
                 );
 
-                System.out.println("--------------------------------");
             }
         }
     }

@@ -2,25 +2,20 @@ package Day1.Q2;
 
 class PowerManager {
 
-    // 8 sectors stored in a single byte
     private byte sectorStates = 0;
 
-    // Turn ON a sector
     public void turnOnSector(int sectorIndex) {
         sectorStates = (byte) (sectorStates | (1 << sectorIndex));
     }
 
-    // Turn OFF a sector
     public void turnOffSector(int sectorIndex) {
         sectorStates = (byte) (sectorStates & ~(1 << sectorIndex));
     }
 
-    // Check if a sector is ON
     public boolean isSectorOn(int sectorIndex) {
         return (sectorStates & (1 << sectorIndex)) != 0;
     }
 
-    // Display binary representation
     public void displayStates() {
         String binary = String.format("%8s",
                 Integer.toBinaryString(sectorStates & 0xFF))
