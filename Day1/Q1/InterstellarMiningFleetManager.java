@@ -30,10 +30,6 @@ abstract class SpaceVessel {
 
 class MiningShip extends SpaceVessel {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c4a2159dd3bb44e5a18fc7957388ff36d073eea0
     private float[][] cargoHold;
 
     public MiningShip(short shipId,
@@ -45,10 +41,6 @@ class MiningShip extends SpaceVessel {
         this.cargoHold = cargoHold;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c4a2159dd3bb44e5a18fc7957388ff36d073eea0
     public float calculateTotalOreWeight() {
 
         float totalWeight = 0.0f;
@@ -62,10 +54,6 @@ class MiningShip extends SpaceVessel {
         return totalWeight;
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c4a2159dd3bb44e5a18fc7957388ff36d073eea0
     public float findHeaviestContainer() {
 
         float heaviest = Float.MIN_VALUE;
@@ -137,10 +125,6 @@ public class InterstellarMiningFleetManager {
                                 + ship.findHeaviestContainer()
                                 + " kg"
                 );
-<<<<<<< HEAD
-
-=======
->>>>>>> c4a2159dd3bb44e5a18fc7957388ff36d073eea0
             }
         }
     }
